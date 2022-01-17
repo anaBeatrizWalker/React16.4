@@ -1,11 +1,5 @@
-import React, { cloneElement } from "react"
-
-//Para ca filho, clona o elemento passando as propriedades do pai e as próprias propriedades do filho
-function childrenWithProps(props){
-    return React.Children.map(props.children, child => {
-        return cloneElement(child, {...props, ...child.props})
-    })
-}
+import React from "react"
+import {childrenWithProps} from '../utils/funcao'
 
 export default props => 
     <div>
